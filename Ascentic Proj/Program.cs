@@ -35,80 +35,31 @@ namespace Ascentic_Proj
             int department = Int32.Parse(Console.ReadLine());
 
             Employee anEmployee = new Employee(id, firstName, lastName, email, phone, dateOfBarth, JoiningDateTime, department);
+            //Employee anEmployee = new Employee();
+            Salary salary = new Salary();
 
-            string[] roles = anEmployee.GetRole(Console.ReadLine());
-
-            // int increment = anEmployee.GetTotalYearsOfWorkExpirience();
-            Console.WriteLine("\n\nOUTPUTS\n================================");
-            Console.WriteLine("\nEmployee ID: " + anEmployee.ID + "\nName: " + anEmployee.GetFullName() + "\nDate of Birth: " +
-                anEmployee.DateOfBirth.ToShortDateString() + "\nJoining Date: " + anEmployee.JoiningDateTime.ToShortDateString() + "\nDesignation: " +
-                anEmployee.Department + "\nTotal Work Years: " + anEmployee.GetTotalYearsOfWorkExpirience() + " ");
-            
-          
+            DataManipulation dataManipulation = new DataManipulation();
 
             Console.Write("\nEnter OT Hours: ");
             int otHours = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("\n\nSALARY\n================================");
-
-           // doSalary();
-            
             if (department == 3)
             {
-
-                doSalaryForSales();
-                Console.ReadLine();
-                int exitCode = 0;
-                Environment.Exit(exitCode);
+                Console.WriteLine("\n\nOUTPUTS\n================================");
+                Console.WriteLine("\nEmployee ID: " + anEmployee.ID + "\nName: " + anEmployee.FirstName + "  " + anEmployee.LastName + "\nDate of Birth: " +
+                    anEmployee.DateOfBirth.ToShortDateString() + "\nJoining Date: " + anEmployee.JoiningDateTime.ToShortDateString() + "\nDesignation: " +
+                    anEmployee.Department + "\nTotal Basic Salary with OT : " + " " + dataManipulation.GetTotalBasicSalaryFoSales(JoiningDateTime, salary.basicSalary, otHours));
             }
             else
             {
-                doSalary();
+                Console.WriteLine("\n\nOUTPUTS\n================================");
+                Console.WriteLine("\nEmployee ID: " + anEmployee.ID + "\nName: " + anEmployee.FirstName + "  " + anEmployee.LastName + "\nDate of Birth: " +
+                    anEmployee.DateOfBirth.ToShortDateString() + "\nJoining Date: " + anEmployee.JoiningDateTime.ToShortDateString() + "\nDesignation: " +
+                    anEmployee.Department + "\nTotal Basic Salary with OT : " + " " + dataManipulation.GetTotalBasicSalary(JoiningDateTime, salary.basicSalary, otHours));
             }
 
-            //doSalaryForSales();
-
-            void doSalary()
-            {
-                Salary s = new Salary();
-
-                int yearsOfWork = anEmployee.GetTotalYearsOfWorkExpirience();
-
-                //int SalaryAmountWithInc = (int)(s.basicSalary * yearsOfWork);
-                int SalaryIncrement = 1000 * yearsOfWork;
-                //Console.WriteLine(s.basicSalary * yearsOfWork);
-
-                int SalaryAmountWithInc = (int)(s.basicSalary + SalaryIncrement);
-
-                Console.WriteLine("\nTotal Salary Monthly: " + SalaryAmountWithInc);
 
 
-                int otCalculator = (int)(SalaryAmountWithInc + s.CalculateOT(otHours));
-
-                Console.WriteLine("\nTotal Salary Monthly with OT : " + otCalculator);
-            }
-
-            
-            void doSalaryForSales()
-            {
-                Salary s = new Salary();
-
-                int yearsOfWork = anEmployee.GetTotalYearsOfWorkExpirience();
-
-                //int SalaryAmountWithInc = (int)(s.basicSalary * yearsOfWork);
-                int SalaryIncrement = 1000 * yearsOfWork;
-                //Console.WriteLine(s.basicSalary * yearsOfWork);
-
-                int SalaryAmountWithInc = (int)(s.basicSalary + SalaryIncrement);
-
-                Console.WriteLine("\nTotal Salary Monthly: " + SalaryAmountWithInc);
-
-
-                int otCalculator = (int)(SalaryAmountWithInc + s.CalculateOTForSales(otHours,SalaryAmountWithInc));
-
-                Console.WriteLine("\nTotal Salary Monthly with OT : " + otCalculator);
-            }
-            
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dilshan\\Source\\Repos\\Ascentic Proj\\Ascentic Proj\\Ascentic Proj.csproj": {}
+    "D:\\Ascentic Proj\\Ascentic Proj\\Ascentic Proj.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dilshan\\Source\\Repos\\Ascentic Proj\\Ascentic Proj\\Ascentic Proj.csproj": {
+    "D:\\Ascentic Proj\\Ascentic Proj\\Ascentic Proj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dilshan\\Source\\Repos\\Ascentic Proj\\Ascentic Proj\\Ascentic Proj.csproj",
+        "projectUniqueName": "D:\\Ascentic Proj\\Ascentic Proj\\Ascentic Proj.csproj",
         "projectName": "Ascentic Proj",
-        "projectPath": "C:\\Users\\Dilshan\\Source\\Repos\\Ascentic Proj\\Ascentic Proj\\Ascentic Proj.csproj",
+        "projectPath": "D:\\Ascentic Proj\\Ascentic Proj\\Ascentic Proj.csproj",
         "packagesPath": "C:\\Users\\Dilshan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dilshan\\Source\\Repos\\Ascentic Proj\\Ascentic Proj\\obj\\",
+        "outputPath": "D:\\Ascentic Proj\\Ascentic Proj\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -12,3 +12,17 @@ C:\Users\Dilshan\Source\Repos\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.
 C:\Users\Dilshan\Source\Repos\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.1\Ascentic Proj.dll
 C:\Users\Dilshan\Source\Repos\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.1\Ascentic Proj.pdb
 C:\Users\Dilshan\Source\Repos\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.1\Ascentic Proj.genruntimeconfig.cache
+D:\Ascentic Proj\Ascentic Proj\bin\Debug\netcoreapp3.1\Ascentic Proj.exe
+D:\Ascentic Proj\Ascentic Proj\bin\Debug\netcoreapp3.1\Ascentic Proj.deps.json
+D:\Ascentic Proj\Ascentic Proj\bin\Debug\netcoreapp3.1\Ascentic Proj.runtimeconfig.json
+D:\Ascentic Proj\Ascentic Proj\bin\Debug\netcoreapp3.1\Ascentic Proj.runtimeconfig.dev.json
+D:\Ascentic Proj\Ascentic Proj\bin\Debug\netcoreapp3.1\Ascentic Proj.dll
+D:\Ascentic Proj\Ascentic Proj\bin\Debug\netcoreapp3.1\Ascentic Proj.pdb
+D:\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.1\Ascentic Proj.csproj.AssemblyReference.cache
+D:\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.1\Ascentic Proj.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.1\Ascentic Proj.AssemblyInfoInputs.cache
+D:\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.1\Ascentic Proj.AssemblyInfo.cs
+D:\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.1\Ascentic Proj.csproj.CoreCompileInputs.cache
+D:\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.1\Ascentic Proj.dll
+D:\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.1\Ascentic Proj.pdb
+D:\Ascentic Proj\Ascentic Proj\obj\Debug\netcoreapp3.1\Ascentic Proj.genruntimeconfig.cache
