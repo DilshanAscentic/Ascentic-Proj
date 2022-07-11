@@ -16,17 +16,15 @@ namespace Ascentic_Proj
         public DateTime JoiningDateTime { get; set; }
         public string Department { get; set; }
 
-        public Employee(string id, string firstName, string lastName, string email, string phone, DateTime DOB, DateTime joiningDateTime, int department)
-        {
-            this.ID = id;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Email = email;
-            this.Phone = phone;
-            this.DateOfBirth = DOB;
-            this.JoiningDateTime = joiningDateTime;
-            this.Department = Enum.GetName(typeof(Department), department);
-        }
+        public double basicSalary = 40000;
+
+        public double otHours;
+
+        public double otPrecent = 120;
+
+        public double overtime;
+
+        public double basicSalPrec;
 
     }
 }

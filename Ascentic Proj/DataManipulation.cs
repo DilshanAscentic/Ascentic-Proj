@@ -6,48 +6,41 @@ namespace Ascentic_Proj
 {
     public class DataManipulation
     {
-        Salary salary1 = new Salary();
-        public int GetTotalBasicSalary(DateTime JoiningDateTime, double salary, int otHours)
+        Employee employee = new Employee();
+        public int GetTotalBasicSalary(DateTime JoiningDateTime, double otHours)
         {
-            // Employee employee = new Employee();
-
-
-
-            int basicSalary = (int)salary1.basicSalary;
+            double basicSalary = employee.basicSalary;
             TimeSpan age = DateTime.Now - JoiningDateTime;
             int years = age.Days / 365;
-            int salaryWithInc = (int)(basicSalary + 1000 * years);
+            double salaryWithInc = basicSalary + 1000 * years;
 
-            double otPrecent = salary1.otPrecent;
+            double otPrecent = employee.otPrecent;
             var otCal = otHours * otPrecent;
 
-            salaryWithInc = (int)(salaryWithInc + otCal);
+            salaryWithInc = salaryWithInc + otCal;
 
-
-            return salaryWithInc;
+            return (int)salaryWithInc;
 
 
         }
 
-        public int GetTotalBasicSalaryFoSales(DateTime JoiningDateTime, double salary, int otHours)
+        public int GetTotalBasicSalary(DateTime JoiningDateTime, double salary, double otHours)
         {
 
-            int basicSalary = (int)salary1.basicSalary;
-
+            double basicSalary = employee.basicSalary;
             TimeSpan age = DateTime.Now - JoiningDateTime;
             int years = age.Days / 365;
 
-            //Salary Amount with work expireience
-            int salaryWithInc = (int)(basicSalary + 1000 * years);
+            double salaryWithInc = basicSalary + 1000 * years;
 
-            double otPrecent = salary1.otPrecent;
-
+            double otPrecent = employee.otPrecent;
             var otCal = otHours * otPrecent + salaryWithInc * 0.05;
 
-            salaryWithInc = (int)(salaryWithInc + otCal);
+            salaryWithInc = salaryWithInc + otCal;
 
 
-            return salaryWithInc;
+            return (int)salaryWithInc;
+
 
         }
     }
