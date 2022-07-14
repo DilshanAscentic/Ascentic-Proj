@@ -7,7 +7,7 @@ namespace Ascentic_Proj
     public class DataManipulation
     {
         // Employee employee = new Employee();
-        public int GetTotalBasicSalary(Employee employee)
+        public virtual int GetTotalBasicSalary(Employee employee)
         {
 
             TimeSpan age = DateTime.Now - employee.JoiningDateTime;
@@ -42,5 +42,24 @@ namespace Ascentic_Proj
 
 
         //}
+    }
+
+    public class DataManipulataionForSales : DataManipulation
+    {
+        public override int GetTotalBasicSalary(Employee employee)
+        {
+            double basicSalary = employee.basicSalary;
+            TimeSpan age = DateTime.Now - employee.JoiningDateTime;
+            double years = age.Days / 365;
+            double salaryWithInc = basicSalary + 1000 * years;
+
+            double otPrecent = employee.otPrecent;
+            var otCal = employee.otHours * otPrecent + salaryWithInc * 0.05;
+
+            salaryWithInc = salaryWithInc + otCal;
+
+
+            return (int)salaryWithInc;
+        }
     }
 }

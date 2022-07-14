@@ -50,13 +50,14 @@ namespace Ascentic_Proj
             Console.Write("\nEnter OT Rate for a Hour: ");
             employee.otPrecent = Convert.ToDouble(Console.ReadLine());
 
+            DataManipulataionForSales dataManipulataionForSales = new DataManipulataionForSales();
 
             if (department.Equals(Department.Sales))
             {
                 Console.WriteLine("\n\nOUTPUTS\n================================");
                 Console.WriteLine("\nEmployee ID: " + employee.ID + "\nName: " + employee.FirstName + "  " + employee.LastName + "\nDate of Birth: " +
                     employee.DateOfBirth.ToShortDateString() + "\nJoining Date: " + employee.JoiningDateTime.ToShortDateString() + "\nDesignation: " +
-                    department + "\nTotal Basic Salary with OT :  " + " " + dataManipulation.GetTotalBasicSalary(employee));
+                    department + "\nTotal Basic Salary with OT :  " + " " + dataManipulataionForSales.GetTotalBasicSalary(employee));
 
                 //Console.WriteLine("Sales");
             }
