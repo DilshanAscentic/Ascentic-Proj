@@ -6,16 +6,15 @@ namespace Ascentic_Proj
 {
     public class DataManipulation
     {
-        Employee employee = new Employee();
-        public int GetTotalBasicSalary(DateTime JoiningDateTime, double otHours)
+        // Employee employee = new Employee();
+        public int GetTotalBasicSalary(Employee employee)
         {
-            double basicSalary = employee.basicSalary;
-            TimeSpan age = DateTime.Now - JoiningDateTime;
-            int years = age.Days / 365;
-            double salaryWithInc = basicSalary + 1000 * years;
 
-            double otPrecent = employee.otPrecent;
-            var otCal = otHours * otPrecent;
+            TimeSpan age = DateTime.Now - employee.JoiningDateTime;
+            int years = age.Days / 365;
+            double salaryWithInc = employee.basicSalary + 1000 * years;
+
+            double otCal = employee.otHours * employee.otPrecent;
 
             salaryWithInc = salaryWithInc + otCal;
 
@@ -24,24 +23,24 @@ namespace Ascentic_Proj
 
         }
 
-        public int GetTotalBasicSalary(DateTime JoiningDateTime, double salary, double otHours)
-        {
+        //public int GetTotalBasicSalary(DateTime JoiningDateTime, double salary, double otHours)
+        //{
 
-            double basicSalary = employee.basicSalary;
-            TimeSpan age = DateTime.Now - JoiningDateTime;
-            int years = age.Days / 365;
+        //    double basicSalary = employee.basicSalary;
+        //    TimeSpan age = DateTime.Now - JoiningDateTime;
+        //    int years = age.Days / 365;
 
-            double salaryWithInc = basicSalary + 1000 * years;
+        //    double salaryWithInc = basicSalary + 1000 * years;
 
-            double otPrecent = employee.otPrecent;
-            var otCal = otHours * otPrecent + salaryWithInc * 0.05;
+        //    double otPrecent = employee.otPrecent;
+        //    var otCal = otHours * otPrecent + salaryWithInc * 0.05;
 
-            salaryWithInc = salaryWithInc + otCal;
-
-
-            return (int)salaryWithInc;
+        //    salaryWithInc = salaryWithInc + otCal;
 
 
-        }
+        //    return (int)salaryWithInc;
+
+
+        //}
     }
 }

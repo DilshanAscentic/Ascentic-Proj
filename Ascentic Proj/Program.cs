@@ -30,10 +30,13 @@ namespace Ascentic_Proj
             employee.Phone = Console.ReadLine();
 
             Console.Write("\nEnter Date of Birth (mm/dd/yyyy): ");
-            DateTime dateOfBarth = Convert.ToDateTime(Console.ReadLine());
+            employee.DateOfBirth = Convert.ToDateTime(Console.ReadLine());
 
             Console.Write("\nJoining Date (mm/dd/yyyy): ");
-            DateTime JoiningDateTime = Convert.ToDateTime(Console.ReadLine());
+            employee.JoiningDateTime = Convert.ToDateTime(Console.ReadLine());
+
+            Console.Write("\nEnter Basic Salary: ");
+            employee.basicSalary = Convert.ToDouble(Console.ReadLine()); // 40000
 
             Console.WriteLine("\nDEPARTMENTS:\n================================\n1. HR\n2. Finance\n3. Sales");
             Console.Write("\nInput any one serial number of the designations given above: ");
@@ -42,7 +45,10 @@ namespace Ascentic_Proj
             department = (Department)Convert.ToInt32(Console.ReadLine());
 
             Console.Write("\nEnter OT Hours: ");
-            employee.otHours = Convert.ToInt32(Console.ReadLine());
+            employee.otHours = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("\nEnter OT Rate for a Hour: ");
+            employee.otPrecent = Convert.ToDouble(Console.ReadLine());
 
 
             if (department.Equals(Department.Sales))
@@ -50,7 +56,7 @@ namespace Ascentic_Proj
                 Console.WriteLine("\n\nOUTPUTS\n================================");
                 Console.WriteLine("\nEmployee ID: " + employee.ID + "\nName: " + employee.FirstName + "  " + employee.LastName + "\nDate of Birth: " +
                     employee.DateOfBirth.ToShortDateString() + "\nJoining Date: " + employee.JoiningDateTime.ToShortDateString() + "\nDesignation: " +
-                    department + "\nTotal Basic Salary with OT :  " + " " + dataManipulation.GetTotalBasicSalary(JoiningDateTime, employee.basicSalary, employee.otHours));
+                    department + "\nTotal Basic Salary with OT :  " + " " + dataManipulation.GetTotalBasicSalary(employee));
 
                 //Console.WriteLine("Sales");
             }
@@ -59,7 +65,7 @@ namespace Ascentic_Proj
                 Console.WriteLine("\n\nOUTPUTS\n================================");
                 Console.WriteLine("\nEmployee ID: " + employee.ID + "\nName: " + employee.FirstName + "  " + employee.LastName + "\nDate of Birth: " +
                     employee.DateOfBirth.ToShortDateString() + "\nJoining Date: " + employee.JoiningDateTime.ToShortDateString() + "\nDesignation: " +
-                    department + "\nTotal Basic Salary with OT :  " + " " + dataManipulation.GetTotalBasicSalary(JoiningDateTime, employee.otHours));
+                    department + "\nTotal Basic Salary with OT :  " + " " + dataManipulation.GetTotalBasicSalary(employee));
             }
 
 
