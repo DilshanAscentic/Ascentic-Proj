@@ -36,7 +36,7 @@ namespace Ascentic_Proj
             employee.JoiningDateTime = Convert.ToDateTime(Console.ReadLine());
 
             Console.Write("\nEnter Basic Salary: ");
-            employee.basicSalary = Convert.ToDouble(Console.ReadLine()); // 40000
+            employee.basicSalary = Convert.ToDouble(Console.ReadLine()); 
 
             Console.WriteLine("\nDEPARTMENTS:\n================================\n1. HR\n2. Finance\n3. Sales");
             Console.Write("\nInput any one serial number of the designations given above: ");
