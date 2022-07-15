@@ -20,7 +20,7 @@ namespace Ascentic_Proj
 
         public double otHours { get; set; }
 
-        public double otPrecent { get; set; } // 120
+        public double otPrecent { get; set; } 
 
         public double overtime { get; set; }
 
