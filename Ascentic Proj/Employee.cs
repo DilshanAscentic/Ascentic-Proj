@@ -16,7 +16,7 @@ namespace Ascentic_Proj
         public DateTime JoiningDateTime { get; set; }
         public string Department { get; set; }
 
-        public double basicSalary { get; set; }  //= 40000;
+        public double basicSalary { get; set; } 
 
         public double otHours { get; set; }
 
