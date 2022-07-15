@@ -22,8 +22,6 @@ namespace Ascentic_Proj
 
         public double otPrecent { get; set; } 
         
-        public double otPrecentt { get; set; } 
-        
         public double overtime { get; set; }
 
         public double basicSalPrec { get; set; }
