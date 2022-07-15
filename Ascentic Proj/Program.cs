@@ -40,8 +40,7 @@ namespace Ascentic_Proj
 
             Console.WriteLine("\nDEPARTMENTS:\n================================\n1. HR\n2. Finance\n3. Sales");
             Console.Write("\nInput any one serial number of the designations given above: ");
-            //employee.Department = Console.ReadLine();
-            //employee.Department = Convert.ToString(Console.ReadLine());
+          
             department = (Department)Convert.ToInt32(Console.ReadLine());
 
             Console.Write("\nEnter OT Hours: ");
