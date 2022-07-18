@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ascentic_Proj.LSP;
+using System;
 
 
 namespace Ascentic_Proj
@@ -11,7 +12,7 @@ namespace Ascentic_Proj
 
             Department department;
 
-            DataManipulation dataManipulation = new DataManipulation();
+           // DataManipulation dataManipulation = new DataManipulation();
 
             Console.Write("\nEnter ID: ");
             employee.ID = Console.ReadLine();
@@ -50,14 +51,18 @@ namespace Ascentic_Proj
             Console.Write("\nEnter OT Rate for a Hour: ");
             employee.otPrecent = Convert.ToDouble(Console.ReadLine());
 
-            DataManipulataionForSales dataManipulataionForSales = new DataManipulataionForSales();
+            //DataManipulataionForSales dataManipulataionForSales = new DataManipulataionForSales();
+
+            SalaryCalculate salaryCalculate = new DataManipulataionForSales();
+            SalaryCalculate salaryCalculate1 = new DataManipulationForOthers();
+
 
             if (department.Equals(Department.Sales))
             {
                 Console.WriteLine("\n\nOUTPUTS\n================================");
                 Console.WriteLine("\nEmployee ID: " + employee.ID + "\nName: " + employee.FirstName + "  " + employee.LastName + "\nDate of Birth: " +
                     employee.DateOfBirth.ToShortDateString() + "\nJoining Date: " + employee.JoiningDateTime.ToShortDateString() + "\nDesignation: " +
-                    department + "\nTotal Basic Salary with OT :  " + " " + dataManipulataionForSales.GetTotalBasicSalary(employee));
+                    department + "\nTotal Basic Salary with OT :  " + " " + salaryCalculate.GetTotalBasicSalary(employee));
 
                 //Console.WriteLine("Sales");
             }
@@ -66,7 +71,7 @@ namespace Ascentic_Proj
                 Console.WriteLine("\n\nOUTPUTS\n================================");
                 Console.WriteLine("\nEmployee ID: " + employee.ID + "\nName: " + employee.FirstName + "  " + employee.LastName + "\nDate of Birth: " +
                     employee.DateOfBirth.ToShortDateString() + "\nJoining Date: " + employee.JoiningDateTime.ToShortDateString() + "\nDesignation: " +
-                    department + "\nTotal Basic Salary with OT :  " + " " + dataManipulation.GetTotalBasicSalary(employee));
+                    department + "\nTotal Basic Salary with OT :  " + " " + salaryCalculate1.GetTotalBasicSalary(employee));
             }
 
 
